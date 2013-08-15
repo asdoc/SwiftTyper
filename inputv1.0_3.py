@@ -14,8 +14,8 @@ userInputWord=""
 positionOfCurrentWord=0
 endOfCurrentWord=0
 currentWordFromPara=""
-paragraph="small para"
-#paragraph="Long years ago we made a tryst with destiny, and now the time comes when we shall redeem our pledge, not wholly or in full measure, but very substantially. At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom."
+#paragraph="small para"
+paragraph="Long years ago we made a tryst with destiny, and now the time comes when we shall redeem our pledge, not wholly or in full measure, but very substantially. At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom."
 words=0
 numberOfReds=0
 numberOfChars=1
@@ -60,13 +60,28 @@ def addToDatabase():
 	global text2
 	global db
 	global tempatt
+	global accuracy
 	accuracy = int(tempfloat)
 	query2=QtSql.QSqlQuery()
-	query2.exec_("SELECT credenzID,attempts FROM newdb")
+	query2.exec_("SELECT name,credenzID,wpm,accuracy,attempts FROM newdb")
 	tempatt=0
+	tempwpm=0
+	tempaccuracy=0
 	while query2.next():
-		if query2.value(0)== text2:
-			tempatt=int(query2.value(1).toString())
+		if query2.value(1) == text2:
+			tempwpm=int(query2.value(2).toString())
+			tempaccuracy=int(query2.value(3).toString())
+			tempatt=int(query2.value(4).toString())
+			if tempwpm > speed:
+				speed=tempwpm
+				accuracy=tempaccuracy
+				msg = QtGui.QMessageBox()
+				msg.setText("You failed to break your record")
+				msg.exec_()
+			else:
+				msg = QtGui.QMessageBox()
+				msg.setText("New best time")
+				msg.exec_()
 			query3=QtSql.QSqlQuery()
 			query3.prepare("DELETE  FROM newdb WHERE credenzID=?")
 			query3.addBindValue(text2)
@@ -133,7 +148,7 @@ class Example(QtGui.QWidget):
 				query4.addBindValue(text)
 				query4.exec_()
 				query4.next()
-				tempstr=query4.value(0).toString()
+				tempstr=query4.value(0).toString()    # tempstr = attemps from newdb 
 				if tempstr:
 					if int(tempstr)>2:
 						msg = QtGui.QMessageBox()
