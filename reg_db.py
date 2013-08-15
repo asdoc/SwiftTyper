@@ -20,7 +20,7 @@ def main():
 		sys.exit()
 
 	query = QtSql.QSqlQuery()
-	ok = query.exec_("CREATE TABLE reg_table(name varchar(20), credenzID varchar(20), college varchar(25))")
+	ok = query.exec_("CREATE TABLE reg_table(name varchar(20), credenzID varchar(20), college varchar(25),phno int)")
 	if ok:
 		msg = QtGui.QMessageBox()
 		msg.setText("You are now registered.")
@@ -34,5 +34,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 
