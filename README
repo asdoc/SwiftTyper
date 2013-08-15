@@ -2,7 +2,7 @@ SwiftTyper for Credenz13
 
 If you don't know what SwiftTyper is:
 SwiftTyper is a typing game newly introduced as a side event in credenz13
-It allows users to register themselves and then play for a maximum of 3 times
+It allows users to register themselves and then play for a maximum of 3 times and stores their best scores
 
 Code Description:
 
@@ -18,7 +18,7 @@ File desciption:
 5. inputv1.0_3.py The main program
 
 Issues to be solved:
-1. Error checking while registering an user   < Create error handling for duplicate registerations >
+1.< solved > Error checking while registering an user   < Create error handling for duplicate registerations >
 
 Procedure for playing the game:
 1. python reg_db.py
@@ -28,4 +28,3 @@ Procedure for playing the game:
 
 Requirements:
 1.python-qt4 libraries
-
