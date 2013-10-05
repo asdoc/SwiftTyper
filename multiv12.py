@@ -448,10 +448,8 @@ class App(QtGui.QWidget):
 			if int(s[0]) == 1009:
 			    self.lbl.setText(s[1])
 			    self.lbl.setStyleSheet(_fromUtf8("font: 24pt \"mry_KacstQurn\";""color:#4C3327;"))
-			elif int(s[0]) == 1010:
-				None
 		
-    	    elif flag2 == 0  and int(s[0])!=1000 and int(s[0])!=1010 and int(s[0])!=1009:
+	    elif flag2 == 0  and int(s[0])!=1000 and int(s[0])!=1010 and int(s[0])!=1009:
 		    self.lcdaccuracy.display(int(str(inpdata)))
             self.nextBlockSize = 0
 
