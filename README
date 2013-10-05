@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Running the game:
 
 1. python init_newdb.py
@@ -14,3 +15,35 @@ Dependencies:
 python 2
 python-qt4 libraries
 QtSql libraries
+=======
+SwiftTyper for Credenz13
+
+If you don't know what SwiftTyper is:
+SwiftTyper is a typing game newly introduced as a side event in credenz13
+It allows users to register themselves and then play for a maximum of 3 times and stores their best scores
+
+Code Description:
+
+The Poject contains two tables
+1. reg_table: For storing all registerations.
+2. newdb:     For hourly storage of scores of people
+
+File desciption:
+1. init_newdb.py: Initiates the newdb table
+2. reg_db.py      Initiates the reg_table table
+3. registerui.py: For reistering a new user
+4. readdb.py:     For displaying all registerd users
+5. inputv1.0_3.py The main program
+
+Issues to be solved:
+1.< solved > Error checking while registering an user   < Create error handling for duplicate registerations >
+
+Procedure for playing the game:
+1. python reg_db.py
+2. python init_newdb.py
+3. python registerui.py   < And register a new user >
+4. python inputv1.0_3.py
+
+Requirements:
+1.python-qt4 libraries
+>>>>>>> 151f746bc518f70a148491a734f16702efcff97a
