@@ -21,6 +21,7 @@ n=0
 flag2=0
 PORT={}
 rankstring="1009 Rankings:-\n"
+prevrankstring=""
 compplayers=0
 for x in range(9001,9011):
 	PORT[x]=[0,0,0,0,str,0,0]
@@ -69,7 +70,8 @@ class Thread(QThread):
 	
     def run(self):
     	global flag2
-	global PORT
+    	global PORT
+    	global prevrankstring
         socket = QTcpSocket()
         if not socket.setSocketDescriptor(self.socketId):
             self.emit(SIGNAL("error(int)"), socket.error())
@@ -114,10 +116,11 @@ class Thread(QThread):
 		        PORT[self.myPort][6]=1
 			self.addtodatabase(s2[0],s2[1],s2[2],s2[3],s2[4])
 		    toSend = QString(rankstring)
+		    prevrankstring=rankstring
 
 
 	    elif int(str(s[0])) == 1009:
-	    	    toSend = QString("1010")
+	    	    toSend = QString(prevrankstring)
 	    else:
 		    PORT[self.myPort][1]=int(str(room))
 		    self.rank=1
