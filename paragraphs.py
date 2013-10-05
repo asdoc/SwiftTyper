@@ -1,0 +1,12 @@
+class paralist:
+	def __init__(self):
+		self.para=[]
+		self.para.append("Money, get away Get a good job with more pay and your O.K. Money it's a gas Grab that cash with both hands and make a stash New car, caviar, four star daydream, Think I'll buy me a football team Money get back!")
+		self.para.append("Open your eyes, Look up to the skies and see, I'm just a poor boy, I need no sympathy, Because I'm easy come, easy go, Little high, little low, Any way the wind blows doesn't really matter to me, to me.")
+		self.para.append("Many men have crossed my way Promising peace and my soul to save But I've already heard it all I've seen what they made with their freedom But I, I have no need for your god The shallow truth of your poisonous tongue Brothers, it's time to make a stand To reclaim our lives Because only steel can set us free.")
+		self.para.append("I hate feeling like this I'm so tired of trying to fight this I'm asleep and all I dream of Is waking to you Tell me that you will listen Your touch is what I'm missing And the more I hide I realize I'm slowly losing you.")
+		self.para.append("Ticking away the moments that make up a dull day Fritter and waste the hours in an off-hand way Kicking around on a piece of ground in your home town Waiting for someone or something to show you the way.")
+		self.para.append("I'm sorry that I hurt you It's something I must live with everyday And all the pain I put you through I wish that I could take it all away And be the one who catches all your tears Thats why I need you to hear I've found a reason for me To change who I used to be A reason to start over new and the reason is You!")
+		self.para.append("I've got a really bad disease It's got me begging on my hands and knees So, take me to emergency Cause something seems to be missing Somebody take the pain away It's like an ulcer bleeding in my brain So send me to the pharmacy so I can lose my memory.")
+		self.para.append("I never feared death or dying I only fear never trying I am whatever I am, Only God can judge me, now One shot, everything rides on tonight Even if I've got three strikes, Ima go for it, This moment, we own it And I'm not to be played with Because it can get dangerous See these people I ride with This moment, we own it!")
+		self.para.append("Hopes and aspirations Unclosing an enthralled door Escalate the sense Enhancing to join the dawn I close my eyes, Inis Mona And reminisce of those palmy days I moon o'er you, Inis Mona As long as I breathe I'll call you my home")
